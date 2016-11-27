@@ -1,6 +1,6 @@
 {
   "name": "brisky-recorder",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Record and play back vigour-state events",
   "main": "lib/index.js",
   "scripts": {

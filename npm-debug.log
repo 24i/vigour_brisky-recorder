@@ -6,25 +6,97 @@
 2 info using npm@3.10.8
 3 info using node@v7.0.0
 4 info git [ 'status', '--porcelain' ]
-5 verbose stack Error: Git working directory not clean.
-5 verbose stack MM package.json
-5 verbose stack     at /Users/jim/.nvm/versions/node/v7.0.0/lib/node_modules/npm/lib/version.js:247:19
-5 verbose stack     at /Users/jim/.nvm/versions/node/v7.0.0/lib/node_modules/npm/lib/utils/no-progress-while-running.js:21:8
-5 verbose stack     at ChildProcess.exithandler (child_process.js:202:7)
-5 verbose stack     at emitTwo (events.js:106:13)
-5 verbose stack     at ChildProcess.emit (events.js:191:7)
-5 verbose stack     at maybeClose (internal/child_process.js:877:16)
-5 verbose stack     at Socket.<anonymous> (internal/child_process.js:334:11)
-5 verbose stack     at emitOne (events.js:96:13)
-5 verbose stack     at Socket.emit (events.js:188:7)
-5 verbose stack     at Pipe._handle.close [as _onclose] (net.js:501:12)
-6 verbose cwd /Users/jim/Desktop/brisky/brisky-recorder
-7 error Darwin 15.3.0
-8 error argv "/Users/jim/.nvm/versions/node/v7.0.0/bin/node" "/Users/jim/.nvm/versions/node/v7.0.0/bin/npm" "version" "patch"
-9 error node v7.0.0
-10 error npm  v3.10.8
-11 error Git working directory not clean.
-11 error MM package.json
-12 error If you need help, you may report this error at:
-12 error     <https://github.com/npm/npm/issues>
-13 verbose exit [ 1, true ]
+5 info lifecycle brisky-recorder@2.0.2~preversion: brisky-recorder@2.0.2
+6 silly lifecycle brisky-recorder@2.0.2~preversion: no script for preversion, continuing
+7 verbose version.write data { name: 'brisky-recorder',
+7 verbose version.write   version: '2.0.2',
+7 verbose version.write   description: 'Record and play back vigour-state events',
+7 verbose version.write   main: 'lib/index.js',
+7 verbose version.write   scripts:
+7 verbose version.write    { test: 'node test | tap-difflet && standard',
+7 verbose version.write      cover: 'istanbul cover --report none --print detail test/index.js',
+7 verbose version.write      dev: 'nodemon test | tap-difflet',
+7 verbose version.write      travis: 'npm run cover -s && istanbul report lcov && ((cat coverage/lcov.info | coveralls) || exit 0)' },
+7 verbose version.write   repository:
+7 verbose version.write    { type: 'git',
+7 verbose version.write      url: 'git+https://github.com/vigour-io/brisky-recorder.git' },
+7 verbose version.write   keywords: [ 'getOwnPropertyDescriptors', 'prototype' ],
+7 verbose version.write   author: 'Vigour.io <dev@vigour.io>',
+7 verbose version.write   license: 'ISC',
+7 verbose version.write   bugs: { url: 'https://github.com/vigour-io/brisky-recorder/issues' },
+7 verbose version.write   homepage: 'https://github.com/vigour-io/brisky-recorder#readme',
+7 verbose version.write   contributors:
+7 verbose version.write    [ 'Jim De Beer <jim@vigour.io>',
+7 verbose version.write      'Shawn Inder <shawn@vigour.io>' ],
+7 verbose version.write   dependencies: { 'brisky-stamp': '^1.0.0', bubleify: '^0.5.1' },
+7 verbose version.write   engines: {},
+7 verbose version.write   devDependencies:
+7 verbose version.write    { coveralls: '^2.11.9',
+7 verbose version.write      ducktape: '^1.0.0',
+7 verbose version.write      istanbul: '^0.4.4',
+7 verbose version.write      nodemon: '^1.9.1',
+7 verbose version.write      'pre-commit': '^1.1.3',
+7 verbose version.write      standard: '^8.1.0',
+7 verbose version.write      'tap-difflet': '0.6.0',
+7 verbose version.write      tape: '4.4.0' },
+7 verbose version.write   browserify: { transform: [ 'bubleify' ] } } to package.json
+8 info lifecycle brisky-recorder@2.0.2~version: brisky-recorder@2.0.2
+9 silly lifecycle brisky-recorder@2.0.2~version: no script for version, continuing
+10 info git [ 'add',
+10 info git   '/Users/jim/Desktop/brisky/brisky-recorder/package.json' ]
+11 info git [ 'commit', '-m', '2.0.2' ]
+12 verbose stack Error: Command failed: git commit -m 2.0.2
+12 verbose stack
+12 verbose stack 0 passing (4ms)
+12 verbose stack
+12 verbose stack standard: Use JavaScript Standard Style (http://standardjs.com)
+12 verbose stack standard: Run `standard --fix` to automatically fix some problems.
+12 verbose stack   /Users/jim/Desktop/brisky/brisky-recorder/lib/index.js:5:5: 'bs' is assigned a value but never used.
+12 verbose stack   /Users/jim/Desktop/brisky/brisky-recorder/lib/index.js:8:5: 'last' is assigned a value but never used.
+12 verbose stack   /Users/jim/Desktop/brisky/brisky-recorder/lib/index.js:9:5: 'start' is defined but never used.
+12 verbose stack   /Users/jim/Desktop/brisky/brisky-recorder/lib/index.js:18:9: 'arr' is assigned a value but never used.
+12 verbose stack   /Users/jim/Desktop/brisky/brisky-recorder/lib/index.js:97:11: Multiple spaces found before '('.
+12 verbose stack pre-commit:
+12 verbose stack pre-commit: We've failed to pass the specified git pre-commit hooks as the `test`
+12 verbose stack pre-commit: hook returned an exit code (1). If you're feeling adventurous you can
+12 verbose stack pre-commit: skip the git pre-commit hooks by adding the following flags to your commit:
+12 verbose stack pre-commit:
+12 verbose stack pre-commit:   git commit -n (or --no-verify)
+12 verbose stack pre-commit:
+12 verbose stack pre-commit: This is ill-advised since the commit is broken.
+12 verbose stack pre-commit:
+12 verbose stack
+12 verbose stack     at ChildProcess.exithandler (child_process.js:211:12)
+12 verbose stack     at emitTwo (events.js:106:13)
+12 verbose stack     at ChildProcess.emit (events.js:191:7)
+12 verbose stack     at maybeClose (internal/child_process.js:877:16)
+12 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+13 verbose cwd /Users/jim/Desktop/brisky/brisky-recorder
+14 error Darwin 15.3.0
+15 error argv "/Users/jim/.nvm/versions/node/v7.0.0/bin/node" "/Users/jim/.nvm/versions/node/v7.0.0/bin/npm" "version" "patch"
+16 error node v7.0.0
+17 error npm  v3.10.8
+18 error code 1
+19 error Command failed: git commit -m 2.0.2
+19 error
+19 error 0 passing (4ms)
+19 error
+19 error standard: Use JavaScript Standard Style (http://standardjs.com)
+19 error standard: Run `standard --fix` to automatically fix some problems.
+19 error   /Users/jim/Desktop/brisky/brisky-recorder/lib/index.js:5:5: 'bs' is assigned a value but never used.
+19 error   /Users/jim/Desktop/brisky/brisky-recorder/lib/index.js:8:5: 'last' is assigned a value but never used.
+19 error   /Users/jim/Desktop/brisky/brisky-recorder/lib/index.js:9:5: 'start' is defined but never used.
+19 error   /Users/jim/Desktop/brisky/brisky-recorder/lib/index.js:18:9: 'arr' is assigned a value but never used.
+19 error   /Users/jim/Desktop/brisky/brisky-recorder/lib/index.js:97:11: Multiple spaces found before '('.
+19 error pre-commit:
+19 error pre-commit: We've failed to pass the specified git pre-commit hooks as the `test`
+19 error pre-commit: hook returned an exit code (1). If you're feeling adventurous you can
+19 error pre-commit: skip the git pre-commit hooks by adding the following flags to your commit:
+19 error pre-commit:
+19 error pre-commit:   git commit -n (or --no-verify)
+19 error pre-commit:
+19 error pre-commit: This is ill-advised since the commit is broken.
+19 error pre-commit:
+20 error If you need help, you may report this error at:
+20 error     <https://github.com/npm/npm/issues>
+21 verbose exit [ 1, true ]
